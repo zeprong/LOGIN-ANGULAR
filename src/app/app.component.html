@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title></title>
+</head>
+<nav> </nav>
+
+<body>
+  <div class="log" [class.active]="swapActive">
+    <div class="login">
+      <form action="/login" method="post">
+        <img src="assets/logo.png" alt="zep">
+        <span>login to continue...</span>
+        <input type="text" id="username" name="username" placeholder="Username"><br>
+        <input type="password" id="password" name="password" placeholder="Password"><br>
+        <a href="">Forgot password</a>
+        <button type="submit">Sign in</button><br><br>
+      </form>
+    </div>
+    <div class="register">
+      <form class="registrarte" action="/register" method="post">
+        <div class="icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-apple"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-windows"></i></a>
+        </div>
+        <span>register to continue...</span>
+        <input type="number" id="id" name="id" placeholder="Cedula o Nit">
+        <input type="text" id="username" name="username" placeholder="Username">
+        <input type="text" id="direccion" name="direccion" placeholder="Direccion">
+        <input type="email" id="email" name="email" placeholder="Email">
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+        <button type="submit">Sign up</button>
+      </form>
+    </div>
+    <div class="Slide">
+      <div class="panel">
+        <div class="swich left">
+          <h1>Thank you for joining us!</h1>
+          <p>Please enter the required information </p><p>to create your user account.</p>
+          <img src="assets/logo.png" alt="zep">
+          <p>If you already have a user, press the button.</p>
+          <button class="hidden" id="login" (click)="swap()">Sign In</button>
+        </div>
+        <div class="swich right">
+          <h1>Welcome back!</h1>
+          <p>"If you don't have an account with us yet, </p>
+          <p>we cordially invite
+            you to become </p><p> part of our community."</p>
+          <button class="hidden" id="register" (click)="swap()">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>
+<router-outlet></router-outlet>
