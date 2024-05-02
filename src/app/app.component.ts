@@ -10,22 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'formAng';
+  title = 'login';
 
   swapActive: boolean = false;
   swap() {
     this.swapActive = !this.swapActive;
   }
-
-
-
-
-
-
-
-
-
-  
 }
 
 
